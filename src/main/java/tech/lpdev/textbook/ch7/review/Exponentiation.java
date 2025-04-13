@@ -10,14 +10,15 @@ public class Exponentiation {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter a number: ");
-        double base = input.nextDouble();
+        int base = input.nextInt();
         System.out.print("Enter another number: ");
-        double exponent = input.nextDouble();
+        int exponent = input.nextInt();
 
+        System.out.printf("%d^%d = %d", base, exponent, powerOf(base, exponent));
         System.out.println(base + "^" + exponent + " = " + MathUtil.round(powerOf(base, exponent), 2));
     }
 
-    public static double powerOf(double base, double exponent) {
-        return Math.pow(base, exponent);
+    public static int powerOf(int base, int exponent) {
+        return (int) Math.pow(base, exponent);
     }
 }

@@ -1,7 +1,5 @@
 package tech.lpdev.textbook.ch4.review;
 
-import math.MathUtil;
-
 import java.util.Scanner;
 
 public class GradeAvg1 {
@@ -19,6 +17,6 @@ public class GradeAvg1 {
         System.out.print("Enter fifth grade: ");
         int fifth = input.nextInt();
         double average = (double)(first + second + third + fourth + fifth) / 5.0;
-        System.out.println("The average grade is " + MathUtil.round(average, 1) + "%");
+        System.out.printf("The average grade is %.1f%%", average);
     }
 }

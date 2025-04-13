@@ -3,27 +3,28 @@ package tech.lpdev.textbook.ch4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Ex3 {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        Scanner input = new Scanner(System.in);
         double rent, tuition, books, extra, scholarships, finalCost;
 
         System.out.print("Rent: ");
-        rent = Double.parseDouble(input.readLine());
+        rent = input.nextDouble();
 
         System.out.print("Tuition: ");
-        tuition = Double.parseDouble(input.readLine());
+        tuition = input.nextDouble();
 
         System.out.print("Books and other materiels: ");
-        books = Double.parseDouble(input.readLine());
+        books = input.nextDouble();
 
         System.out.print("Other expenses: ");
-        extra = Double.parseDouble(input.readLine());
+        extra = input.nextDouble();
 
         System.out.print("Scholarships: ");
-        scholarships = Double.parseDouble(input.readLine());
+        scholarships = input.nextDouble();
 
         finalCost = rent + tuition + books + extra - scholarships;
         System.out.println("The final cost will be: $" + finalCost);

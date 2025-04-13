@@ -11,6 +11,6 @@ public class TempConverter {
         System.out.print("Enter a temperature in fahrenheit: ");
         int f = input.nextInt();
         double c = (f - 32) * (5.0 / 9.0);
-        System.out.println(f + "F in celsius is " + MathUtil.round(c, 1) + "C");
+        System.out.printf(f + "F in celsius is %.1fC", c);
     }
 }

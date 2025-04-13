@@ -1,7 +1,5 @@
 package tech.lpdev.textbook.ch7;
 
-import math.MathUtil;
-
 import java.util.Scanner;
 
 public class Ex2 {
@@ -34,34 +32,34 @@ public class Ex2 {
     }
 
     private static void inchesToCentimeters(double inches) {
-        System.out.println(inches + " inches equals " + MathUtil.round((inches * 2.54), 2) + " centimeters");
+        System.out.printf("%.0f inches equals %.2f centimeters\n", inches, (inches * 2.54));
     }
 
     private static void feetToCentimeters(double feet) {
-        System.out.println(feet + " feet equals " + MathUtil.round((feet * 30.48), 2) + " centimeters");
+        System.out.printf("%.0f feet equals %.2f centimeters\n", feet, (feet * 30.48));
     }
 
     private static void yardsToMeters(double yards) {
-        System.out.println(yards + " yards equals " + MathUtil.round((yards / 1.094), 2) + " meters");
+        System.out.printf("%.0f yards equals %.2f meters\n", yards, (yards / 1.094));
     }
 
     private static void milesToKilometers(double miles) {
-        System.out.println(miles + " miles equals " + MathUtil.round((miles * 1.609), 2) + " kilometers");
+        System.out.printf("%.0f miles equals %.2f kilometers\n", miles, (miles * 1.609));
     }
 
     private static void centimetersToInches(double centimeters) {
-        System.out.println(centimeters + " centimeters equals " + MathUtil.round((centimeters / 2.54), 2) + " inches");
+        System.out.printf("%.0f centimeters equals %.2f inches\n", centimeters, (centimeters * 0.393701));
     }
 
     private static void centimetersToFeet(double centimeters) {
-        System.out.println(centimeters + " centimeters equals " + MathUtil.round((centimeters / 30.48), 2) + " feet");
+        System.out.printf("%.0f centimeters equals %.2f feet\n", centimeters, (centimeters / 30.48));
     }
 
     private static void metersToYards(double meters) {
-        System.out.println(meters + " meters equals " + MathUtil.round((meters * 1.094), 2) + " yards");
+        System.out.printf("%.0f meters equals %.2f yards\n", meters, (meters * 1.094));
     }
 
     private static void kilometersToMiles(double kilometers) {
-        System.out.println(kilometers + " milometers equals " + MathUtil.round((kilometers / 1.609), 2) + " miles");
+        System.out.printf("%.0f kilometers equals %.2f miles\n", kilometers, (kilometers * 0.621371));
     }
 }

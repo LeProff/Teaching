@@ -3,13 +3,15 @@ package tech.lpdev.textbook.ch7;
 
 import math.MathUtil;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Ex9 {
 
     public static void main(String[] args) {
+        Random random = new Random();
         Scanner input = new Scanner(System.in);
-        int stones = MathUtil.random(15, 30);
+        int stones = random.nextInt(15, 31);
         boolean playerWins = false;
 
         while (stones != 0) {
@@ -53,7 +55,8 @@ public class Ex9 {
     }
 
     private static int drawStones(int stones) {
-        if (stones >= 3) return MathUtil.random(1, 3);
+        Random random = new Random();
+        if (stones >= 3) return random.nextInt(3) + 1;
         else return MathUtil.random(1, stones);
     }
 }

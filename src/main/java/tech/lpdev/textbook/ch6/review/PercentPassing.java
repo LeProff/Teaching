@@ -2,19 +2,18 @@ package tech.lpdev.textbook.ch6.review;
 
 import math.MathUtil;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class PercentPassing {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        Scanner input = new Scanner(System.in);
 
         int count = 0, passing = 0;
         while (true) {
             System.out.print("Enter a grade: ");
-            int grade = Integer.parseInt(input.readLine());
+            int grade = input.nextInt();
 
             if (grade == 999) break;
             else if (grade > 100 || grade < 0) System.out.println(grade + " is not a valid grade.");

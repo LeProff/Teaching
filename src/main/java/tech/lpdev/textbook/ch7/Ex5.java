@@ -26,6 +26,6 @@ public class Ex5 {
         total += d * 0.10;
         total += n * 0.05;
         total += p * 0.01;
-        return "$" + String.valueOf(total);
+        return "$" + total;
     }
 }

@@ -1,7 +1,5 @@
 package tech.lpdev.textbook.ch7.review;
 
-import math.MathUtil;
-
 import java.util.Scanner;
 
 public class TimeConverter {
@@ -29,27 +27,27 @@ public class TimeConverter {
         System.out.print("Enter the number of hours: ");
         int hours = input.nextInt();
 
-        System.out.println(hours + " hours = " + (hours * 60) + " minutes");
+        System.out.printf("%d hours = %.2f minutes", hours, (hours * 60.0));
     }
 
     public static void daysToHours(Scanner input) {
         System.out.print("Enter the number of days: ");
         int days = input.nextInt();
 
-        System.out.println(days + " days = " + (days * 24) + " hours");
+        System.out.printf("%d days = %.2f hours", days, (days * 24.0));
     }
 
     public static void minutesToHours(Scanner input) {
         System.out.print("Enter the number of minutes: ");
         int minutes = input.nextInt();
 
-        System.out.println(minutes + " minutes = " + MathUtil.round((double) minutes / 60, 2) + " hours");
+        System.out.printf("%d minutes = %.2f hours", minutes, (minutes / 60.0));
     }
 
     public static void hoursToDays(Scanner input) {
         System.out.print("Enter the number of hours: ");
         int hours = input.nextInt();
 
-        System.out.println(hours + " hours = " + MathUtil.round((double) (hours / 24), 2) + " days");
+        System.out.printf("%d hours = %.2f days", hours, (hours / 24.0));
     }
 }

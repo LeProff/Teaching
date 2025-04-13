@@ -7,18 +7,28 @@ public class Ex1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
-        int num = input.nextInt();
+        int num1, num2;
 
-        boolean isPrime = true;
-        for (int i = 2; i <= num / 2; i++) {
-            if (num % i == 0) {
-                isPrime = false;
-                break;
+        do {
+            System.out.print("Enter a number: ");
+            num1 = input.nextInt();
+            System.out.printf("Enter another number larger than %d: ", num1);
+            num2 = input.nextInt();
+            if (num1 > num2) System.out.println("The second number must be larger than the first.");
+            else break;
+        } while (true);
+
+        for (int i = num1; i <= num2; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.println(i);
             }
         }
-
-        if (isPrime) System.out.println(num + " is prime");
-        else System.out.println(num + " is not prime");
     }
 }
